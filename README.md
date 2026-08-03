@@ -75,12 +75,26 @@ Cross-links only — install separately if needed:
 | research | open-repo code, not Cursor product |
 | debugger | repro + fix |
 
+## Daily feature-flag automation (Cloud)
+
+Download and extract a Cursor AppImage, then catalog client feature gates:
+
+```bash
+bash scripts/setup-deps.sh
+bash scripts/install-pair.sh --first-run   # or --previous-url/--previous-version/--previous-commit
+bash scripts/run-pipeline.sh
+```
+
+`run-pipeline.sh` extracts the **new** AppImage and catalogs client gates from workbench `kFe` into `workspace/runs/<timestamp>/`. Automation prompt: `prompts/daily-feature-flags.md`.
+
 ## Plugin layout
 
 ```text
 cursor-detective/
 ├── .cursor-plugin/plugin.json
 ├── assets/logo.svg
+├── prompts/
+├── scripts/          # AppImage install + feature-flag catalog
 ├── skills/cursor-detective/
 │   ├── SKILL.md
 │   ├── reference.md

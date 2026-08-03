@@ -6,3 +6,6 @@
 __pycache__/
 squashfs-root/
 .cursor/
+workspace/
+versions/
+*.AppImage
