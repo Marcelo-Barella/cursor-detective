@@ -22,14 +22,27 @@ Invoke with `/cursor-detective [theme]` (empty theme → `general-scan`). Report
 
 ## Install
 
-### Local (development)
+### Local (user-level)
+
+Cursor rejects symlinks whose target is outside `~/.cursor/plugins/local`. Copy the plugin there (same pattern as other local plugins):
 
 ```bash
 git clone https://github.com/Marcelo-Barella/cursor-detective.git
-ln -s "$(pwd)/cursor-detective" ~/.cursor/plugins/local/cursor-detective
+mkdir -p ~/.cursor/plugins/local
+rm -rf ~/.cursor/plugins/local/cursor-detective
+rsync -a --delete \
+  --exclude '.git/' \
+  --exclude '.cursor/' \
+  --exclude '/scripts/' \
+  --exclude '/prompts/' \
+  --exclude 'squashfs-root/' \
+  --exclude 'versions/' \
+  --exclude 'workspace/' \
+  "$(pwd)/cursor-detective/" \
+  ~/.cursor/plugins/local/cursor-detective/
 ```
 
-Then run **Developer: Reload Window**. Confirm the skill appears under Customize / Skills.
+Then **Developer: Reload Window**. Confirm `cursor-detective` under Settings → Plugins (user scope).
 
 ### Marketplace
 

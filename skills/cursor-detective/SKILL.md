@@ -8,6 +8,10 @@ description: >-
   /cursor-detective or asks to reverse-engineer Cursor internals, scan
   state.vscdb, inspect AppImage/workbench, or compare on-disk behavior.
 disable-model-invocation: true
+mode: true
+icon: cursor-logo
+color: brand
+reminder: Cursor Detective — read-only forensics only; probe to max depth in one pass; write .cursor/plans/detective-<theme>.plan.md; never modify ~/.cursor or install trees.
 ---
 
 # cursor-detective
