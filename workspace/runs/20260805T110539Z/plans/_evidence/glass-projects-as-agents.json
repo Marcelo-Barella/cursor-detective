@@ -1,0 +1,57 @@
+{
+  "flag": "glass_projects_as_agents",
+  "kebab": "glass-projects-as-agents",
+  "inventory": {
+    "name": "glass_projects_as_agents",
+    "client": true,
+    "default": false
+  },
+  "category": "glass",
+  "registry_entry": "glass_projects_as_agents:{client:!0,default:!1}",
+  "registry_symbols": {
+    "desktop": "POe",
+    "glass": "xDe"
+  },
+  "call_site_samples": [
+    {
+      "source": "desktop",
+      "snippet": "enabled:{client:!0,default:!1},glass_chats_section_reset:{client:!0,default:!1},glass_projects_as_agents:{client:!0,default:!1},glass_project_send_message_bubbles:{client:!0,default:!1},glass_projects"
+    },
+    {
+      "source": "glass",
+      "snippet": "enabled:{client:!0,default:!1},glass_chats_section_reset:{client:!0,default:!1},glass_projects_as_agents:{client:!0,default:!1},glass_project_send_message_bubbles:{client:!0,default:!1},glass_projects"
+    },
+    {
+      "source": "glass",
+      "snippet": "a=B({\"out-build/vs/glass/browser/agents-ui-presentation.js\"(){\"use strict\";zmi=\"glass_projects_as_agents\",iBa={sectionLabel:\"Projects\",singularLabel:\"Project\",newLabel:\"New Project\"},sBa={sectionLabel:\"Agents\",singularLabel:\"Agent\",newLabel:\"New Agent\"}"
+    },
+    {
+      "source": "glass",
+      "snippet": "function Xjs(){return el(zmi)}function Eyn(){const t=_Am(2),e=Xjs();let n;return t[0]!==e?(n=nBa(e),t[0]=e,t[1]=n):n=t[1],n}"
+    },
+    {
+      "source": "glass",
+      "snippet": "_setupProjectAppTabLabel(){const t=this._experimentService.getFeatureGateProperty(zmi),e=i=>{const s=nBa(t.nonReactive()===!0).singularLabel"
+    }
+  ],
+  "modules_near_mentions": [
+    "out-build/vs/glass/browser/agents-ui-presentation.js",
+    "out-build/vs/glass/browser/hooks/use-glass-agents-ui.react.js",
+    "out-build/vs/glass/browser/services/tab-persistence/glass-tab-persistence-service.js",
+    "out-build/vs/glass/browser/components/agent-panel/hooks/use-agent-panel-header-actions.react.js",
+    "out-build/vs/glass/browser/components/editor-panel/project-tasks-composition.react.js",
+    "out-build/vs/glass/browser/components/agent-panel/hooks/empty-state-submit-options.js"
+  ],
+  "mention_counts": {
+    "desktop": 1,
+    "glass": 2
+  },
+  "local_override": "none",
+  "confidence": "Confirmed",
+  "what_it_changes": "When on, Glass UI renames Projects vocabulary to Agents (section/singular/new labels, header fallbacks, sidebar expand/collapse, Context tab singularLabel). Default off keeps Projects copy. Glass-only consumer.",
+  "workbench_js": "/workspace/workspace/runs/20260805T110539Z/extract/new/usr/share/cursor/resources/app/out/vs/workbench/workbench.desktop.main.js",
+  "glass_js": "/workspace/workspace/runs/20260805T110539Z/extract/new/usr/share/cursor/resources/app/out/vs/workbench/workbench.glass.main.js",
+  "version": "3.15.1",
+  "commit_sha": "41c5e281845de0ce890a8053a3874064bfbdb8bf",
+  "product_commit": "41c5e281845de0ce890a8053a3874064bfbdb8b0"
+}
