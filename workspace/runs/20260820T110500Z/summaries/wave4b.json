@@ -1,0 +1,57 @@
+[
+  {
+    "name": "glass_cloud_agent_sidebar_ci_status",
+    "confidence": "Confirmed",
+    "what": "When enabled on Glass, cloud-agent sidebar rows with open/draft PRs subscribe to Origin CI snapshots and show a CI checks ring (BNl) in the trailing PR affordance instead of lifecycle icon only; default off skips CI fetch entirely.",
+    "modules": [
+      "experimentConfig.gen.js",
+      "MCv / Jf0 / ev0 / Yf0 / Zf0",
+      "ci-checks-ring.react.js",
+      "pr-lifecycle-presentation.js",
+      "Origin CI sync service (zhc/PCv)",
+      "glass-sidebar-agent-trailing-pr-icon / iv0"
+    ],
+    "plan_file": "/workspace/workspace/runs/20260820T110500Z/plans/detective-feature-flag-glass-cloud-agent-sidebar-ci-status.plan.md"
+  },
+  {
+    "name": "glass_create_dialog_cloud_picker",
+    "confidence": "Confirmed",
+    "what": "When enabled via ma(SGg) in CreateProjectDialog, the Glass new-project dialog loads Origin cloud projects, resolves cloud submit targets (vGg/bGg), and gates the Create button on cloud repo matching; default off uses local target selection only.",
+    "modules": [
+      "create-project-dialog-create-gating.js",
+      "create-project-dialog.react.js",
+      "new-project-cloud-picker-utils.js",
+      "new-project-cloud-picker.react.js",
+      "project-submit-target.js",
+      "origin-cloud-projects.js"
+    ],
+    "plan_file": "/workspace/workspace/runs/20260820T110500Z/plans/detective-feature-flag-glass-create-dialog-cloud-picker.plan.md"
+  },
+  {
+    "name": "glass_disable_eager_indexing_for_local_sessions",
+    "confidence": "Confirmed",
+    "what": "When enabled for local Glass agent workspaces, workbench passes disableGlassLocalSessionEagerIndexing in ext-host init; extensionHostProcess Rct then forces shouldIndex() false, suppressing cursor-retrieval codebase indexing for that session; default off preserves user indexing preference.",
+    "modules": [
+      "experimentConfig.gen.js",
+      "workbench _createExtHostInitData",
+      "extensionHostProcess.js (Rct)",
+      "cursor-retrieval shouldIndex"
+    ],
+    "plan_file": "/workspace/workspace/runs/20260820T110500Z/plans/detective-feature-flag-glass-disable-eager-indexing-for-local-sessions.plan.md"
+  },
+  {
+    "name": "glass_pdf_file_tab_preview",
+    "confidence": "Confirmed",
+    "what": "When enabled via ue1/XAi gate helpers, Glass file tabs route application/pdf files to inline pdf.js preview (GlassPdfPreview) instead of the normal text/binary editor path; default off keeps standard editor handling for PDFs.",
+    "modules": [
+      "glass-pdf-preview-gate.js",
+      "glass-pdf-preview-routing.js",
+      "glass-viewable-media.js",
+      "glass-editor-handle.js",
+      "glass-pdf-preview.react.js",
+      "glass-pdfjs-loader.js",
+      "use-file-tab-editor-panel-presentation.react.js"
+    ],
+    "plan_file": "/workspace/workspace/runs/20260820T110500Z/plans/detective-feature-flag-glass-pdf-file-tab-preview.plan.md"
+  }
+]
