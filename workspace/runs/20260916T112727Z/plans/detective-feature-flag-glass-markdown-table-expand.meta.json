@@ -1,0 +1,10 @@
+{
+  "flag_name": "glass_markdown_table_expand",
+  "confidence": "Confirmed",
+  "what_it_changes": "When enabled, Glass markdown surfaces (agent conversation composer and file-tab markdown preview) show a hover corners-out Expand table button on <table> elements; click opens a fullscreen popup with a cloned, link-preserving table reader. When disabled (bundled default false), nef host returns null and tables stay inline-only. Desktop workbench is registry-only.",
+  "modules": "experimentConfig.gen.js (B5e/xNe), experimentService.js, use-feature-gate.react.js (Gb/va), glass-markdown-table-expand.js, glass-markdown-table-expand-host.react.js (nef/ief), glass-markdown-table-expand-overlay.react.js (Oxk/Lxk), agent-conversation-composer (KPw), file-tab markdown preview renderer",
+  "local_override": "experimentService.setFeatureFlagOverride (dev builds, persisted TTL); remote Statsig gate via getFeatureGateProperty/checkFeatureGate",
+  "client": true,
+  "bundled_default": false,
+  "category": "glass-ui"
+}
