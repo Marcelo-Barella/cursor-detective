@@ -1,0 +1,22 @@
+{
+  "flag_name": "grok_bot_cloud_agent_durable_watch",
+  "confidence": "Inferred",
+  "what_it_changes": "Boolean Statsig gate in the Grok-bot × cloud-agent transcript cluster (B5e/xNe, client=true, bundled default=false). Intended to gate durable server-streaming watch of Grok-bot cloud-agent transcripts via WatchGrokBotTranscripts (cursor/generation replay, absolute_lifetime_ms, multiplexed GrokBotTranscriptWatchFrame events). Zero checkFeatureGate call sites in Cursor 3.21.1 desktop/glass — registry-only placeholder; proto/RPC scaffolding ships but no client stream consumer.",
+  "modules": [
+    "experimentConfig.gen.js (B5e/xNe)",
+    "experimentService.js",
+    "aiserver.v1.WatchGrokBotTranscripts (ServerStreaming)",
+    "aiserver.v1.GrokBotTranscriptWatchFrame and frame types",
+    "loadedCloudAgent.js",
+    "cloudAgentStream.js",
+    "cloudAgentTranscriptIndexWorkerMain.js",
+    "cloudAgentArtifactsStore.js",
+    "out/main.js",
+    "cursor-agent-host/dist/main.js",
+    "cursor-always-local/dist/main.js"
+  ],
+  "local_override": "experimentService.setFeatureFlagOverride via generic dev flag UI (Object.keys B5e); no product branch consumes grok_bot_cloud_agent_durable_watch in 3.21.1 client; effective value depends on remote Statsig assignment for server/future UI",
+  "client": true,
+  "bundled_default": false,
+  "category": "other"
+}
