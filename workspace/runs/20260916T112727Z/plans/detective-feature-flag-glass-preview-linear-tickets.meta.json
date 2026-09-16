@@ -1,0 +1,10 @@
+{
+  "flag_name": "glass_preview_linear_tickets",
+  "confidence": "Confirmed",
+  "what_it_changes": "When enabled, hovering/focusing linear.app issue links in composer markdown triggers linearIssueSummaryStore.request → dashboardClient.batchGetLinearIssueSummaries and shows a hover card (title, state, assignee, project, updated time); when disabled (bundled default false), the gate short-circuits to unavailable/disabled with no RPC and the tooltip never receives summary data. Wired in both desktop and glass via checkFeatureGate in linearIssueSummaryStore.request (B5e/xNe registry).",
+  "modules": "experimentConfig.gen.js (B5e/xNe), linearIssueSummaryStore.js, linear-issue-link-hover-card.react.js, ComposerMarkdownLinkContent.react.js, experimentService.js, cursorAuthenticationService (dashboardClient RPC), Linear URL parser (VNo/bal inline)",
+  "local_override": "experimentService.setFeatureFlagOverride (dev builds, persisted TTL); remote Statsig gate (disableExposureLog true)",
+  "client": true,
+  "bundled_default": false,
+  "category": "glass"
+}
