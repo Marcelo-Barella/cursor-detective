@@ -1,0 +1,10 @@
+{
+  "flag_name": "glass_origin_pr_notifications",
+  "confidence": "Confirmed",
+  "what_it_changes": "When enabled, Glass starts originPrNotificationService (watch/stream Origin PRs, diff snapshots, deliver in-app toasts or OS banners for merged/closed/reviewed/CI-failure events on followed PRs) and exposes an Origin Notifications settings toggle plus glassOriginPrNotificationsEnabled context key; click opens PR via glass.openOriginPrFromNotification. When disabled (bundled default false), service ctor early-returns and settings toggle is hidden. Desktop workbench is registry + gated settings/search only — no notification service.",
+  "modules": "experimentConfig.gen.js (B5e/xNe), origin-pr-notification-{types,delivery,diff,service,menu-items}.js, origin-pr-subscription-{planner,quick-pick}.js, origin-pr-window-coverage.js, glassContextKeys.js (MJa/glassOriginPrNotificationsEnabled), settings notifications section (CK1/_Sy), searchIndex.js (glass-origin-pr-notifications), prUpdatesService, systemNotificationService, tabPersistenceService",
+  "local_override": "experimentService.setFeatureFlagOverride (dev builds, persisted TTL); remote Statsig gate via va()/q0() and checkFeatureGate(qSs)",
+  "client": true,
+  "bundled_default": false,
+  "category": "glass"
+}
