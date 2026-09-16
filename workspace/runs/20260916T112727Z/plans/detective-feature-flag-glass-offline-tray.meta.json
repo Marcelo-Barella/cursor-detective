@@ -1,0 +1,18 @@
+{
+  "flag_name": "glass_offline_tray",
+  "confidence": "high",
+  "what_it_changes": "When enabled, Glass shows a dismissible header tray (title \"You're offline\"; body warns sends fail until reconnect) on agent-panel bottom and prompt-input top while navigator.onLine is false; hook use-glass-offline-tray.react.js gates on va(\"glass_offline_tray\") and browser online/offline events with per-episode dismiss. Bundled default false hides tray; desktop workbench is registry-only.",
+  "modules": [
+    "B5e/xNe feature-gate registry (experimentConfig.gen.js)",
+    "use-glass-offline-tray.react.js (C8f hook)",
+    "glass-offline-tray.react.js (Vjf tray UI)",
+    "tray-constants.js (header-tray stack priorities)",
+    "experimentService.getFeatureGateProperty / va()",
+    "Composer agent-panel header surface",
+    "Composer prompt-input tray stack ($A)"
+  ],
+  "local_override": "experimentService.setFeatureFlagOverride (dev builds, persisted TTL); remote Statsig gate",
+  "client": true,
+  "bundled_default": false,
+  "category": "glass"
+}
