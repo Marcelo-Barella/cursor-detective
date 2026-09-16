@@ -1,0 +1,10 @@
+{
+  "flag_name": "glass_local_ollama",
+  "confidence": "Confirmed",
+  "what_it_changes": "When enabled in local inference mode, aiSettingsService.rankLocalPickerModelsByBackendCatalog passes promoteAllWithoutOverlap=true to xGy/ygf so all Ollama picker models are promoted to section 1 (defaultOn) when backend catalog name overlap is empty; when disabled (bundled default false), zero-overlap yields no promotions and local models stay in section 99 (hidden from default selection). Wired in both desktop and glass via checkFeatureGate(j0u/XYh).",
+  "modules": "experimentConfig.gen.js (B5e/xNe), localProviderModelEnrichment.js, localProviderModelMatch.js (xGy/ygf, KYh/VYh), experimentService.js, aiSettingsService.js (refreshDefaultModels, fetchLocalProviderModelEnrichment, rankLocalPickerModelsByBackendCatalog)",
+  "local_override": "experimentService.setFeatureFlagOverride (dev builds, persisted TTL); remote Statsig gate (disableExposureLog false)",
+  "client": true,
+  "bundled_default": false,
+  "category": "models"
+}
