@@ -1,0 +1,13 @@
+{
+  "name": "glass_projects_hide_root_apps",
+  "confidence": "Confirmed",
+  "what_it_changes": "On project agents, hides root coordinator app picker entries (file/terminal/desktop/etc.) and suppresses several global shortcuts while the apps tray is simplified.",
+  "modules": [
+    "use-context-key.react.js",
+    "agent-workspace-app-picker (Qmx bundle chunk)",
+    "agent-chat-tab-content.react.js"
+  ],
+  "registry_only": false,
+  "plan_path": "plans/detective-feature-flag-glass-projects-hide-root-apps.plan.md",
+  "version": "3.25.4"
+}

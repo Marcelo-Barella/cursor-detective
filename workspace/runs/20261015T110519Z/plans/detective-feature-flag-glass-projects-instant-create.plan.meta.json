@@ -1,0 +1,14 @@
+{
+  "name": "glass_projects_instant_create",
+  "confidence": "Confirmed",
+  "what_it_changes": "Bypasses the create-project dialog and immediately kicks off no-repo project creation when the user clicks New Project.",
+  "modules": [
+    "glass-new-project-service.js",
+    "use-new-project-availability.react.js",
+    "create-project-instant.js",
+    "create-project-dialog.react.js"
+  ],
+  "registry_only": false,
+  "plan_path": "plans/detective-feature-flag-glass-projects-instant-create.plan.md",
+  "version": "3.25.4"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "glass_sidebar_file_drop",
+  "confidence": "Confirmed",
+  "what_it_changes": "Enables drag-and-drop of files onto Glass sidebar agent rows, attaching pending files to the targeted agent.",
+  "modules": [
+    "use-sidebar-file-drop-delivery.react.js",
+    "glass-sidebar-agent-order-service.js",
+    "sidebar agent list surface (Nkx hook)"
+  ],
+  "registry_only": false,
+  "plan_path": "plans/detective-feature-flag-glass-sidebar-file-drop.plan.md",
+  "version": "3.25.4"
+}

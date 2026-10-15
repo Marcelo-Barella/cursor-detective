@@ -1,0 +1,12 @@
+{
+  "name": "glass_sidebar_full_loader_only",
+  "confidence": "Confirmed",
+  "what_it_changes": "Forces sidebar agent leading icons to use the full spinner loader (not compact status glyphs) while work is in progress.",
+  "modules": [
+    "agent-row-leading-icon.react.js",
+    "agent-leading-status.js"
+  ],
+  "registry_only": false,
+  "plan_path": "plans/detective-feature-flag-glass-sidebar-full-loader-only.plan.md",
+  "version": "3.25.4"
+}

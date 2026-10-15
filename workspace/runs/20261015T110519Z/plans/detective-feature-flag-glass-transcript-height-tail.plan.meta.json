@@ -1,0 +1,13 @@
+{
+  "name": "glass_transcript_height_tail",
+  "confidence": "Confirmed",
+  "what_it_changes": "Persists virtualized composer transcript row heights/folds to cursorDiskKV (with LRU limits) for smoother remount/scroll restoration; requires `stable_step_bubble_ids`.",
+  "modules": [
+    "composerTranscriptHeightTail.js",
+    "composer-data-service (prefetch/save/prune)",
+    "virtualized composer plane (Qpv/UkS)"
+  ],
+  "registry_only": false,
+  "plan_path": "plans/detective-feature-flag-glass-transcript-height-tail.plan.md",
+  "version": "3.25.4"
+}
