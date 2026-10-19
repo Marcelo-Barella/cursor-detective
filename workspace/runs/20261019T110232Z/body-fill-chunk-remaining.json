@@ -1,0 +1,24 @@
+{
+  "note": "Remaining Notion update steps (apply via CallDynamicTool notion-update-page with JSON from each path). Order matters per key.",
+  "steps": [
+    "/tmp/cdt-grok_bot_connect_ux_mobile.json",
+    "/tmp/step-grok_bot_admin_data_deletion-1.json",
+    "/tmp/step-grok_bot_admin_data_deletion-2.json",
+    "/tmp/step-realtime_voice_utterances-1.json",
+    "/tmp/step-realtime_voice_utterances-2.json",
+    "/tmp/step-glass_origin_sync_escalate_reconnects-0.json",
+    "/tmp/step-glass_origin_sync_escalate_reconnects-1.json",
+    "/tmp/step-glass_origin_sync_escalate_reconnects-2.json",
+    "/tmp/step-glass_origin_sync_escalate_reconnects-3.json",
+    "/tmp/step-glass_chrome_resize-0.json",
+    "/tmp/step-glass_chrome_resize-1.json",
+    "/tmp/step-glass_chrome_resize-2.json",
+    "/tmp/step-glass_chrome_resize-3.json",
+    "/tmp/step-glass_chrome_resize-4.json",
+    "/tmp/step-glass_disable_hosted_workspace_root_follow-0.json",
+    "/tmp/step-glass_disable_hosted_workspace_root_follow-1.json",
+    "/tmp/step-glass_disable_hosted_workspace_root_follow-2.json",
+    "/tmp/step-glass_disable_hosted_workspace_root_follow-3.json",
+    "/tmp/step-glass_disable_hosted_workspace_root_follow-4.json"
+  ]
+}
